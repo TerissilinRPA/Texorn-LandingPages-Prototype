@@ -13,8 +13,8 @@
             <img src="@/assets/img/logo.png" alt="Logo" />
           </v-list-item-avatar>
           <v-list-item-content>
-            <v-list-item-title class="title">Calango</v-list-item-title>
-            <v-list-item-subtitle>WEB</v-list-item-subtitle>
+            <v-list-item-title  class="title">Texorn</v-list-item-title>
+            <v-list-item-subtitle>WEBSITE</v-list-item-subtitle>
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -45,36 +45,40 @@
       :color="color"
       :flat="flat"
       dark
-      class="px-15"
+      class="px-0"
       :class="{ expand: flat }"
-    >
+    > <div> </div>
       <v-toolbar-title>
-        <v-img src="@/assets/img/logo.png" max-width="50px" />
+        <v-img src="@/assets/img/logo.png" max-width="40px" class="ml-2"/>
+      
       </v-toolbar-title>
-      <v-spacer />
+             <v-spacer></v-spacer>
       <v-app-bar-nav-icon
         @click.stop="drawer = !drawer"
-        class="mr-4"
+        class="mr-0"
         v-if="isXs"
       />
       <div v-else>
         <v-btn text @click="$vuetify.goTo('#hero')">
-          <span class="mr-2">Home</span>
+          <span class="mr-0">Home</span>
         </v-btn>
         <v-btn text @click="$vuetify.goTo('#features')">
-          <span class="mr-2">About</span>
-        </v-btn>
-        <v-btn icon href="https://stackoverflow.com/questions/49654527/open-link-in-new-window-with-vuetify-v-btn-and-vue-router" target="_blank">
-          <span class="mr-2">Blog</span>
+          <span class="mr-0">About</span>
         </v-btn>
         <v-btn text @click="$vuetify.goTo('#download')">
-          <span class="mr-2">Academic</span>
+          <span class="mr-0">Academic</span>
         </v-btn>
         <v-btn text @click="$vuetify.goTo('#pricing')">
-          <span class="mr-2">Services</span>
+          <span class="mr-0">Services</span> 
         </v-btn>
-        <v-btn rounded outlined text @click="$vuetify.goTo('#contact')">
-          <span class="mr-2">Contact</span>
+        <v-btn text @click="$vuetify.goTo('#contact')">
+          <span class="mr-0">Contact</span>
+        </v-btn>
+        <v-btn text href="https://stackoverflow.com/questions/49654527/open-link-in-new-window-with-vuetify-v-btn-and-vue-router" target="_blank">
+          <span class="mr-0">Blog</span>
+        </v-btn>
+        <v-btn text:true @click="$vuetify.goTo('#contact')">
+          <span class="mr-0">Sign In</span>
         </v-btn>
       </div>
     </v-app-bar>
